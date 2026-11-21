@@ -1,0 +1,137 @@
+PASS demo clock is Tue 2026-11-24 [2026-11-24 === 2026-11-24]
+PASS demo weekday Tuesday [2 === 2]
+PASS engine has 3 services
+PASS engine has 2 resources
+PASS engine closed Sunday
+PASS salon has 3 services
+PASS salon has 2 resources
+PASS salon closed Sunday
+PASS clinic has 3 services
+PASS clinic has 2 resources
+PASS clinic closed Sunday
+PASS salon slots generated
+PASS salon first slot 09:00
+PASS buffer respected: last available start <=16:00 (16:00)
+PASS clinic uses 20-min interval
+PASS salon uses 30-min interval
+PASS Omar Monday: no available slots
+PASS Omar Monday: reason names Omar pattern
+PASS Omar day-off: no available
+PASS day-off reason named
+PASS Mahnoor Tuesday off: no available
+PASS Sunday closed flagged
+PASS Sunday reason names Sunday
+PASS taken slots deterministic [[{"time":"09:00","end":"09:45","disabled":false,"reason":"","available":true},{"time":"09:30","end":"10:15","disabled":false,"reason":"","available":true},{"time":"10:00","end":"10:45","disabled":false,"reason":"","available":true},{"time":"10:30","end":"11:15","disabled":false,"reason":"","available":true},{"time":"11:00","end":"11:45","disabled":false,"reason":"","available":true},{"time":"11:30","end":"12:15","disabled":true,"reason":"Ayesha Khan is already booked at 11:30","available":false},{"time":"12:00","end":"12:45","disabled":false,"reason":"","available":true},{"time":"12:30","end":"13:15","disabled":false,"reason":"","available":true},{"time":"13:00","end":"13:45","disabled":false,"reason":"","available":true},{"time":"13:30","end":"14:15","disabled":false,"reason":"","available":true},{"time":"14:00","end":"14:45","disabled":true,"reason":"Ayesha Khan is already booked at 14:00","available":false},{"time":"14:30","end":"15:15","disabled":false,"reason":"","available":true},{"time":"15:00","end":"15:45","disabled":false,"reason":"","available":true},{"time":"15:30","end":"16:15","disabled":false,"reason":"","available":true},{"time":"16:00","end":"16:45","disabled":false,"reason":"","available":true},{"time":"16:30","end":"17:15","disabled":true,"reason":"Ayesha Khan is not working at 16:30","available":false},{"time":"17:00","end":"17:45","disabled":true,"reason":"Ayesha Khan is not working at 17:00","available":false},{"time":"17:30","end":"18:15","disabled":true,"reason":"Ayesha Khan is not working at 17:30","available":false},{"time":"18:00","end":"18:45","disabled":true,"reason":"Ayesha Khan is not working at 18:00","available":false}] === [{"time":"09:00","end":"09:45","disabled":false,"reason":"","available":true},{"time":"09:30","end":"10:15","disabled":false,"reason":"","available":true},{"time":"10:00","end":"10:45","disabled":false,"reason":"","available":true},{"time":"10:30","end":"11:15","disabled":false,"reason":"","available":true},{"time":"11:00","end":"11:45","disabled":false,"reason":"","available":true},{"time":"11:30","end":"12:15","disabled":true,"reason":"Ayesha Khan is already booked at 11:30","available":false},{"time":"12:00","end":"12:45","disabled":false,"reason":"","available":true},{"time":"12:30","end":"13:15","disabled":false,"reason":"","available":true},{"time":"13:00","end":"13:45","disabled":false,"reason":"","available":true},{"time":"13:30","end":"14:15","disabled":false,"reason":"","available":true},{"time":"14:00","end":"14:45","disabled":true,"reason":"Ayesha Khan is already booked at 14:00","available":false},{"time":"14:30","end":"15:15","disabled":false,"reason":"","available":true},{"time":"15:00","end":"15:45","disabled":false,"reason":"","available":true},{"time":"15:30","end":"16:15","disabled":false,"reason":"","available":true},{"time":"16:00","end":"16:45","disabled":false,"reason":"","available":true},{"time":"16:30","end":"17:15","disabled":true,"reason":"Ayesha Khan is not working at 16:30","available":false},{"time":"17:00","end":"17:45","disabled":true,"reason":"Ayesha Khan is not working at 17:00","available":false},{"time":"17:30","end":"18:15","disabled":true,"reason":"Ayesha Khan is not working at 17:30","available":false},{"time":"18:00","end":"18:45","disabled":true,"reason":"Ayesha Khan is not working at 18:00","available":false}]]
+PASS some seeded taken slots exist
+PASS lead-time: 09:00 today disabled too soon
+PASS lead-time: 10:30 today disabled too soon
+PASS lead-time boundary: 11:00 not too-soon reason
+PASS past date rejected
+PASS Sunday rejected naming closed
+PASS valid date passes
+PASS empty date rejected
+PASS skin services differ
+PASS skin business differs
+PASS skin interval differs
+PASS theme accent differs salon vs clinic
+PASS theme accent differs engine vs salon
+PASS CSS has salon theme block
+PASS CSS has clinic theme block
+PASS seed bookings =5 [5 === 5]
+PASS filter salon seeds =2
+PASS filter clinic seeds =2
+PASS filter by resource ayesha =1
+PASS filter by status confirmed =3
+PASS filter by date 2026-11-25 =3
+PASS filter combined date+status =2
+PASS persisted booking blocks its slot
+PASS cancel frees slot (matches no-booking state) [false === false]
+PASS overlap blocks 09:30
+PASS valid phone passes
+PASS bad phone fails with phone error
+PASS short name fails
+PASS live-clear logic: fixed phone clears error
+PASS ref format BE-DEMO-####
+PASS ref deterministic [BE-DEMO-3122 === BE-DEMO-3122]
+PASS whatsapp link wa.me salon number
+PASS whatsapp contains ref
+PASS whatsapp contains service
+PASS engine ink on bg >=4.5 (16.10)
+PASS engine white on accent >=4.5 (7.90)
+PASS engine muted on bg >=4.5 (8.02)
+PASS engine accent focus on bg >=3 (7.90)
+PASS salon ink on bg >=4.5 (15.85)
+PASS salon white on accent >=4.5 (7.88)
+PASS salon muted on bg >=4.5 (8.40)
+PASS salon accent focus on bg >=3 (7.56)
+PASS clinic ink on bg >=4.5 (13.96)
+PASS clinic white on accent >=4.5 (5.47)
+PASS clinic muted on bg >=4.5 (7.38)
+PASS clinic accent focus on bg >=3 (5.47)
+PASS error red on white >=4.5 (6.54)
+PASS index.html has DEMO labelling
+PASS index.html has skip link
+PASS index.html -> css/style.css exists
+PASS index.html -> assets/favicon.svg exists
+PASS index.html -> index.html exists
+PASS index.html -> index.html exists
+PASS index.html -> book.html exists
+PASS index.html -> admin.html exists
+PASS index.html -> docs.html exists
+PASS index.html -> book.html exists
+PASS index.html -> admin.html exists
+PASS index.html -> assets/hero.jpg exists
+PASS index.html -> assets/skin-salon.jpg exists
+PASS index.html -> book.html exists
+PASS index.html -> assets/skin-clinic.jpg exists
+PASS index.html -> book.html exists
+PASS index.html -> docs.html exists
+PASS index.html -> js/logic.js exists
+PASS index.html -> js/app.js exists
+PASS book.html has DEMO labelling
+PASS book.html has skip link
+PASS book.html -> css/style.css exists
+PASS book.html -> assets/favicon.svg exists
+PASS book.html -> index.html exists
+PASS book.html -> index.html exists
+PASS book.html -> book.html exists
+PASS book.html -> admin.html exists
+PASS book.html -> docs.html exists
+PASS book.html -> js/logic.js exists
+PASS book.html -> js/app.js exists
+PASS book.html -> js/book.js exists
+PASS admin.html has DEMO labelling
+PASS admin.html has skip link
+PASS admin.html -> css/style.css exists
+PASS admin.html -> assets/favicon.svg exists
+PASS admin.html -> index.html exists
+PASS admin.html -> index.html exists
+PASS admin.html -> book.html exists
+PASS admin.html -> admin.html exists
+PASS admin.html -> docs.html exists
+PASS admin.html -> js/logic.js exists
+PASS admin.html -> js/app.js exists
+PASS admin.html -> js/admin.js exists
+PASS docs.html has DEMO labelling
+PASS docs.html has skip link
+PASS docs.html -> css/style.css exists
+PASS docs.html -> assets/favicon.svg exists
+PASS docs.html -> index.html exists
+PASS docs.html -> index.html exists
+PASS docs.html -> book.html exists
+PASS docs.html -> admin.html exists
+PASS docs.html -> docs.html exists
+PASS docs.html -> book.html exists
+PASS docs.html -> js/logic.js exists
+PASS docs.html -> js/app.js exists
+PASS unique titles [4 === 4]
+PASS JSON-LD SoftwareApplication on index
+PASS sitemap exists with 4 pages
+PASS robots exists
+PASS no lorem ipsum
+PASS no third-party CDN except Google Fonts
+PASS code weight <400KB (46KB)
+PASS each image <=120KB (max 103KB)
+PASS media total <=1.6MB
+
+TOTAL: 135 PASS / 0 FAIL
