@@ -33,3 +33,75 @@ Reasons (defects as: what is wrong · where · what fixed looks like):
 Next step: [ ] To AICOS-025 release gate   [X] Back to Gate 5 (evidence completions only — both are external to the build)   [ ] Back to Gate 2
 
 Disclosures: none — no test assertion was amended and no harness fix was needed in this pass. Locator (element) screenshots of step panels include the sticky header at their top edge by framing; full-page captures are the layout evidence.
+
+---
+
+## Addendum — Re-verification FIX RUN (2026-11-21, later the same day)
+
+Independent re-verification (`Reverification-2026-11-21/REPORT.md`) found 1 visible + 2 minor
+defects. All three FIXED, re-shot and read; battery **135/135 PASS** unamended after fixes:
+
+- **BE-1 (visible) — Admin on phone hid Status + every action button off-view** (598px table
+  inside a 350px scroller, no cue; refs/dates wrapped mid-token). Fix: a responsive table
+  treatment in the product's own system — at ≤640px the bookings table becomes labelled cards
+  (each cell carries `data-th`, rendered as its label; thead hidden; no sideways scroll).
+  Status pill and Confirm / Complete / Cancel are all in the initial view of every booking.
+  Proof: `fix-booking-engine/admin-phone.png` (5 booking cards read by eye) + DOM probe
+  (6 labelled cells per row, 15 action buttons, 0 overflow).
+- **BE-2 (minor) — phone header flush-left on all 4 pages.** Root cause: `.head-in`'s
+  `padding:12px 0` shorthand zeroed the `.wrap` inline padding (same defect family as Gift
+  Basket's hero). Fix: `padding-block:12px`. Proof: logo left = 20px at 390 on all 4 pages
+  (was 0).
+- **BE-3 (minor) — Admin desktop Actions wrapped 2+1 in every row.** Fix: actions are now a
+  deliberate uniform stack of small buttons (`.btn.small` + `.acts` flex column) — one
+  treatment at every width; in phone cards the same buttons flow into a single row.
+  Proof: `fix-booking-engine/admin-desktop.png`.
+- **Same-family audit:** this site has no scroll-reveal and no lazy-loaded imagery — nothing
+  to fix; checked and recorded so the audit is explicit.
+
+**Score: unchanged at 90/100 — REJECT (evidence bar only).** Held points remain the
+served-preview CWV (Area 7) and the AICOS-112 §0 sign-off (Area 1).
+
+---
+
+## Addendum — PREMIUM UPGRADE PASS (2026-11-22, ladder site #7)
+
+Product-site treatment per Premium Plan §5 #7 (Fresha lesson). All additions live in
+NEW files (`css/premium.css`, `js/premium.js`, `assets/vendor/`) loaded on index.html
+only; `css/style.css` base layer — including the audit-fixed `ol` rule — is byte-untouched.
+
+- **Signature moment (new technique):** the hero's right column is no longer a photo —
+  it is the REAL engine running: a live mini-booking (`BOOKING_LOGIC.generateSlots` +
+  `BE_APP` skin state) with service/date controls, live slots whose disabled reasons
+  come from the engine, slot selection writing a summary, and re-rendering on skin
+  switch (salon: 19 slots). Proof: `screenshots/signature-moment.png` (mid-interaction,
+  09:00 selected) + premium-checks assertions.
+- **GSAP feature chapters:** the three existing sections are now numbered chapters
+  (01 Slot logic · 02 Skins · 03 The flow) with varied ScrollTrigger entrances
+  (alternating direction/offset, fire once at 88%); Lenis smooth scroll synced via the
+  documented GSAP ticker pattern. Reveal safety: `immediateRender:false` — content is
+  never held hidden.
+- **Stat display numerals:** 3 skins · 2h lead time · 20 min finest interval — every
+  figure already stated in this page's own copy; count-up on scroll. Nothing invented.
+- **Vendor copies (index only, defer, explicit registration):** gsap.min.js 3.15.1,
+  ScrollTrigger.min.js 3.15.1, lenis.min.js + lenis.css 1.3.27 — sha256 match the
+  Install Record.
+- **P8 weights (total gzip JS per page, measured):** index 58,417 B (~57 KB ≤ 90 hero) ·
+  book 7,299 B · admin/docs lower (plain ≤ 20 KB ✓).
+- **Batteries:** tests.js UNAMENDED 142/142 PASS (135 at pass start; +7 are the battery's
+  own per-ref existence assertions for the new vendor/premium files). Separate
+  `premium-checks.js`: 19/19 PASS — every page 390+1440 (0 overflow/broken), mini-booking
+  functional, skin re-render, P1 re-probe (0 browser-blue links), no-JS complete,
+  reduced-motion = Lenis off + clean, zero console/page errors (sandbox font-fetch
+  tunnel failures excluded — they occur on untouched pages too).
+- **Premium Gate P1–P10:** P1 ✓ (base untouched, re-probe 0) · P2 ✓ Lenis · P3 ✓
+  (signature = working product demo per §5's site definition; chapters supporting) ·
+  P4 ✓ display clamp(2.6rem,5.4vw,4.3rem) + Space Grotesk numerals · P5 ✓ real product
+  UI hero · P6 ✓ working demo depth · P7 ✓ CSS View Transitions + full states ·
+  P8 ✓ weights above (CWV still unmeasured — no served preview) · P9 ✓ reduced-motion
+  + no-JS proven · P10 ✓ no invented figures, DEMO labelling intact.
+
+**Re-score: 90 → 91/100** (+1 Area 4: signature scroll moment + smooth scroll, both
+reduced-motion-proven). **Verdict remains REJECT — evidence bar only:** the same two
+external items are still outstanding (served-preview CWV, Area 7 · AICOS-112 §0
+sign-off, Area 1). No GitHub push (per upgrade-run instruction).

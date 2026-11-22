@@ -1,0 +1,22 @@
+salon skin business -> Glow & Grace Salon
+salon skin --accent -> #9D174D
+salon slot chosen -> 2026-11-25 09:00
+salon phone error CONTENT -> Please enter a valid Pakistani mobile number (e.g. 0321 1234567).
+salon phone error after fix (must be empty) -> ""
+salon review CONTENT -> Business: Glow & Grace SalonService: Haircut & Finish (45 min, PKR 2,500)With: Ayesha KhanWhen: 2026-11-25 at 09:00Name: Fatima KhanPhone: 0321 1234567
+salon confirmation CONTENT -> Booking confirmed — demoReference BE-DEMO-8448Haircut & Finish with Ayesha Khan on 2026-11-25 at 09:00 at Glow & Grace Salon. Total: PKR 2,500.This is a demo confirmation — no real appointment has been booked. The booking is saved in this browser and appears i
+salon FIRING whatsapp log -> [{"ref":"BE-DEMO-8448","at":"demo-clock","href":"https://wa.me/923215551234?text=Booking%20BE-DEMO-8448%20%E2%80%94%20Haircut%20%26%20Finish%20with%20Ayesha%20Khan%20on%202026-11-25%20at%2009%3A00%20at%20Glow%20%26%20Grace%20Salon.%20Name%3A%20Fatima%20Khan.%20(Demo%20booking%20%E2%80%94%20no%20real%20appointment.)"}]
+clinic skin business -> Sehat Plus Clinic
+clinic skin --accent -> #0F766E
+clinic slot chosen -> 2026-11-25 09:00
+clinic phone error CONTENT -> Please enter a valid Pakistani mobile number (e.g. 0321 1234567).
+clinic phone error after fix (must be empty) -> ""
+clinic review CONTENT -> Business: Sehat Plus ClinicService: GP Consultation (20 min, PKR 1,500)With: Dr Sana TariqWhen: 2026-11-25 at 09:00Name: Fatima KhanPhone: 0321 1234567
+clinic confirmation CONTENT -> Booking confirmed — demoReference BE-DEMO-6344GP Consultation with Dr Sana Tariq on 2026-11-25 at 09:00 at Sehat Plus Clinic. Total: PKR 1,500.This is a demo confirmation — no real appointment has been booked. The booking is saved in this browser and appears i
+clinic FIRING whatsapp log -> [{"ref":"BE-DEMO-8448","at":"demo-clock","href":"https://wa.me/923215551234?text=Booking%20BE-DEMO-8448%20%E2%80%94%20Haircut%20%26%20Finish%20with%20Ayesha%20Khan%20on%202026-11-25%20at%2009%3A00%20at%20Glow%20%26%20Grace%20Salon.%20Name%3A%20Fatima%20Khan.%20(Demo%20booking%20%E2%80%94%20no%20real%20appointment.)"},{"ref":"BE-DEMO-6344","at":"demo-clock","href":"https://wa.me/923009876543?text=Booking%20BE-DEMO-6344%20%E2%80%94%20GP%20Consultation%20with%20Dr%20Sana%20Tariq%20on%202026-11-25%20at%2009%3A00%20at%20Sehat%20Plus%20Clinic.%20Name%3A%20Fatima%20Khan.%20(Demo%20booking%20%E2%80%94%20no%20real%20appointment.)"}]
+admin count -> 7 bookings shown (demo data)
+admin filter confirmed -> 5 bookings shown (demo data)
+cancel-proof BEFORE (slot 09:00 after booking) -> {"disabled":true,"text":"09:00Ayesha Khan is already booked at 09:00"}
+admin cancelled ref -> BE-DEMO-8448
+cancel-proof AFTER (slot 09:00 after admin cancel) -> {"disabled":false,"text":"09:00to 09:45"}
+FIRING bookings stored = 7 refs=BE-DEMO-4101:confirmed,BE-DEMO-4102:pending,BE-DEMO-4103:confirmed,BE-DEMO-4104:completed,BE-DEMO-4105:confirmed,BE-DEMO-8448:cancelled,BE-DEMO-6344:confirmed

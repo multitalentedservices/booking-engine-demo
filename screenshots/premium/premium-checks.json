@@ -1,0 +1,81 @@
+{
+  "results": [
+    {
+      "name": "index phone no overflow/broken",
+      "pass": true
+    },
+    {
+      "name": "index desktop no overflow/broken",
+      "pass": true
+    },
+    {
+      "name": "book phone no overflow/broken",
+      "pass": true
+    },
+    {
+      "name": "book desktop no overflow/broken",
+      "pass": true
+    },
+    {
+      "name": "admin phone no overflow/broken",
+      "pass": true
+    },
+    {
+      "name": "admin desktop no overflow/broken",
+      "pass": true
+    },
+    {
+      "name": "docs phone no overflow/broken",
+      "pass": true
+    },
+    {
+      "name": "docs desktop no overflow/broken",
+      "pass": true
+    },
+    {
+      "name": "mini-booking renders live slots (17)",
+      "pass": true
+    },
+    {
+      "name": "mini-booking has bookable slots (13)",
+      "pass": true
+    },
+    {
+      "name": "Lenis active",
+      "pass": true
+    },
+    {
+      "name": "GSAP + ScrollTrigger loaded",
+      "pass": true
+    },
+    {
+      "name": "slot click writes summary",
+      "pass": true
+    },
+    {
+      "name": "skin switch re-renders mini-booking (Glow & Grace, 19 slots)",
+      "pass": true
+    },
+    {
+      "name": "P1: zero browser-blue links on index",
+      "pass": true
+    },
+    {
+      "name": "no-JS index complete (chapters + stats + fallback note)",
+      "pass": true
+    },
+    {
+      "name": "reduced-motion: no lenis class",
+      "pass": true
+    },
+    {
+      "name": "reduced-motion index clean",
+      "pass": true
+    },
+    {
+      "name": "zero console/page errors",
+      "pass": true
+    }
+  ],
+  "errors": []
+}
